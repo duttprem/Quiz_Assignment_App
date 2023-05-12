@@ -1,6 +1,6 @@
 .title {
-  text-transform: uppercase;
-  font-size: 8vw;
+  font-size: 4vw;
+  font-weight: 800;
   font-family: "Montserrat", sans-serif;
   cursor: pointer;
 }
@@ -9,10 +9,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: rgb(85, 183, 221);
+
 }
 
 .divider {
   margin: 10px;
   width: 100%;
-  background-color: grey;
+  background-color: #fff;
+}
+span{
+  color: rgb(9, 134, 250);
 }

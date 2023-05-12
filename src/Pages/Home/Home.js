@@ -1,5 +1,4 @@
 import { Button, MenuItem, TextField } from "@mui/material";
-// import { MenuItem } from "@mui/material";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
@@ -13,6 +12,7 @@ const Home = ({ name, setName, fetchQuestions }) => {
 
   const history = useNavigate();
 
+
   const handleSubmit = () => {
     if (!category || !difficulty || !name) {
       setError(true);
@@ -20,7 +20,9 @@ const Home = ({ name, setName, fetchQuestions }) => {
     } else {
       setError(false);
       fetchQuestions(category, difficulty);
-      history.push("/quiz");
+      // history.push("/quiz");
+      window.open("/quiz")
+      // history.open("/quiz")
     }
   };
 
@@ -78,7 +80,7 @@ const Home = ({ name, setName, fetchQuestions }) => {
           </Button>
         </div>
       </div>
-      <img src="/quiz.svg" className="banner" alt="quiz app" />
+      {/* <img src="/quiz.svg" className="banner" alt="quiz app" /> */}
     </div>
   );
 };
