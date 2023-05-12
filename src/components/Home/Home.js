@@ -1,8 +1,13 @@
 import React from 'react'
+import QuestionCard from '../QuestionCard/QuestionCard'
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <>
+    <div>
+      <QuestionCard />
+    </div>
+    </>
   )
 }
 
