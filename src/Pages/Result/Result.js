@@ -4,13 +4,13 @@ import { useNavigate } from "react-router-dom";
 import "./Result.css";
 
 const Result = ({ name, score }) => {
-  const history = useNavigate();
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (!name) {
-      history.push("/");
+      navigate("/");
     }
-  }, [name, history]);
+  }, [name, navigate]);
 
   return (
     <div className="result">

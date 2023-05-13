@@ -17,7 +17,7 @@ const Question = ({
   const [selected, setSelected] = useState();
   const [error, setError] = useState(false);
 
-  const history = useNavigate();
+  const navigate = useNavigate();
 
   const handleSelect = (i) => {
     if (selected === i && selected === correct) return "select";
@@ -33,7 +33,7 @@ const Question = ({
 
   const handleNext = () => {
     if (currQues > 8) {
-      history.push("/result");
+      navigate("/result");
     } else if (selected) {
       setCurrQues(currQues + 1);
       setSelected();

@@ -10,7 +10,7 @@ const Home = ({ name, setName, fetchQuestions }) => {
   const [difficulty, setDifficulty] = useState("");
   const [error, setError] = useState(false);
 
-  const history = useNavigate();
+  const navigate= useNavigate();
 
 
   const handleSubmit = () => {
@@ -20,8 +20,8 @@ const Home = ({ name, setName, fetchQuestions }) => {
     } else {
       setError(false);
       fetchQuestions(category, difficulty);
-      // history.push("/quiz");
-      window.open("/quiz")
+      navigate("/quiz");
+      // window.open("/quiz")
       // history.open("/quiz")
     }
   };
