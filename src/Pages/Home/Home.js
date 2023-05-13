@@ -80,7 +80,6 @@ const Home = ({ name, setName, fetchQuestions }) => {
           </Button>
         </div>
       </div>
-      {/*add image */}
     </div>
   );
 };
